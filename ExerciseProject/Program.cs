@@ -13,15 +13,24 @@ namespace ExerciseProject
         static void Main(string[] args)
         {
             Data.AddData(vinnare);
-
-            DelegateClass.SortList(vinnare, DelegateClass.ByNationality);
-            Console.ReadLine();
-
-            //RunProgram();
+            ChooseFilterFunction();
+           
         }
 
-        
-        static void RunProgram()
+        static void RunDelegateProgram()
+        {
+            do
+            {
+                Console.Clear();
+                Display.DisplayList(vinnare);
+                DelegateClass.FilterPlayers(vinnare);
+            } while (PlayAgainUserInput == "Y");
+
+                        
+        }
+
+
+        static void RunLINQProgram()
         {
             do
             {
@@ -30,7 +39,21 @@ namespace ExerciseProject
                 FilterClass.FilterPlayers(vinnare);
             } while (PlayAgainUserInput == "Y");
         }
-        
+
+        static void ChooseFilterFunction() 
+        {
+            Console.WriteLine("1. Välj 1 för LINQ\n2. Välj 2 för Delegates");
+            int playerInput = FilterClass.ValidateIntervalInput(1,2,"Ange en siffra mellan 1 och 2:");
+            switch (playerInput)
+            {
+                case 1: RunLINQProgram();
+                    break;
+                case 2: RunDelegateProgram();
+                    break;
+                default: break;
+            }
+
+        }
             
 
     }

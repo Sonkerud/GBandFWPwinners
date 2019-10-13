@@ -9,7 +9,7 @@ namespace ExerciseProject
     {
         static public void FilterPlayers(List<IGBWinners> vinnare)
         {
-            Console.WriteLine("\n1. Välj 1 för att filtrera på nationalitet\n2. Välj 2 för att filtrera på årtal\n3. " +
+            Console.WriteLine("\nDu använder LINQ\n1. Välj 1 för att filtrera på nationalitet\n2. Välj 2 för att filtrera på årtal\n3. " +
                               "Välj 3 för att filtrera på typ av pris\n4. Välj 4 för att lägga till en ny spelare\n5. Välj 5 för att visa listan\nVal:");
             while (vinnare.Count != 0)
             {
@@ -31,13 +31,14 @@ namespace ExerciseProject
         static List<IGBWinners> Switchen(List<IGBWinners> list)
         {
 
-            int choice = ValidateIntInput("Ange en siffra mellan 1-3");
+            int choice = ValidateIntInput("Ange en siffra mellan 1-5");
 
             switch (choice)
             {
                 case 1:
                     Console.WriteLine("\nVälj nationalitet: ");
                     string nationality = Console.ReadLine();
+                    
                     var listSortedByNationality = list.Where(x => x.Nationality.ToLower() == nationality.ToLower()).ToList();
                     Display.DisplayList(listSortedByNationality);
                     

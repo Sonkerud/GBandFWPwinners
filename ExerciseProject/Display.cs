@@ -7,14 +7,15 @@ namespace ExerciseProject
 {
     public class Display
     {
-        public static void DisplayList(List<IGBWinners> vinnare)
+        public static List<IGBWinners> DisplayList(List<IGBWinners> vinnare)
         {
-            var byYear = vinnare.OrderBy(x => x.WinningYear);
+            Console.WriteLine("Vinnare av Ballon d'or och Fifa World Player:");
             Console.WriteLine("\n");
-            foreach (var winner in byYear)
+            foreach (var winner in vinnare)
             {
                 Console.WriteLine($"Year: {winner.WinningYear} {winner.FirstName} {winner.LastName} Prize: {winner.WhatPrize} Nationality: {winner.Nationality} Club: {winner.Club}");
             }
+            return vinnare;
         }
         public static void ChoseAgain()
         {

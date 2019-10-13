@@ -12,8 +12,8 @@ namespace ExerciseProject
             vinnare.Add(new GBWinners("Barcelona", "Johan", "Cruyff", "Netherlands", 1974, Enum.WhatPrize.GoldenBall));
 
             vinnare.Add(new GBWinners { WinningYear = 1990, FirstName = "Lothar", LastName = "Matthäus", Nationality = "Germany", Club = "Inter", WhatPrize = Enum.WhatPrize.GoldenBall });
-            vinnare.Add(new GBWinners { WinningYear = 1992, FirstName = "Marco", LastName = "Van Basten", Nationality = "Netherlands", Club = "Milan", WhatPrize = Enum.WhatPrize.GoldenBall });
             vinnare.Add(new GBWinners { WinningYear = 1991, FirstName = "Jean-Pierre", LastName = "Papin", Nationality = "France", Club = "Marseille", WhatPrize = Enum.WhatPrize.GoldenBall });
+            vinnare.Add(new GBWinners { WinningYear = 1992, FirstName = "Marco", LastName = "Van Basten", Nationality = "Netherlands", Club = "Milan", WhatPrize = Enum.WhatPrize.GoldenBall });
             vinnare.Add(new GBWinners { WinningYear = 1993, FirstName = "Roberto", LastName = "Baggio", Nationality = "Italy", Club = "Juventus", WhatPrize = Enum.WhatPrize.GoldenBall });
             vinnare.Add(new GBWinners { WinningYear = 1994, FirstName = "Hristo", LastName = "Stoichkov", Nationality = "Bulgaria", Club = "Barcelona", WhatPrize = Enum.WhatPrize.GoldenBall });
             vinnare.Add(new GBWinners { WinningYear = 1995, FirstName = "George", LastName = "Weah", Nationality = "Liberia", Club = "Milan", WhatPrize = Enum.WhatPrize.GoldenBall });
