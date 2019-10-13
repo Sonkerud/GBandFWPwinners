@@ -12,9 +12,12 @@ namespace ExerciseProject
                       
         static void Main(string[] args)
         {
-
             Data.AddData(vinnare);
-            RunProgram();
+
+            DelegateClass.SortList(vinnare, DelegateClass.ByNationality);
+            Console.ReadLine();
+
+            //RunProgram();
         }
 
         
@@ -24,7 +27,7 @@ namespace ExerciseProject
             {
                 Console.Clear();
                 Display.DisplayList(vinnare);
-                SortClass.SortPlayers(vinnare);
+                FilterClass.FilterPlayers(vinnare);
             } while (PlayAgainUserInput == "Y");
         }
         
