@@ -34,7 +34,7 @@ namespace ExerciseProject
 
         }
 
-        public static void AddPlayer(List<IGBWinners> list)
+        public static void AddPlayerToList(List<IGBWinners> list)
         {
             Console.WriteLine("Lägg till ny vinnare. Välj 1 för Ballon d'or. Välj 2 för Fifa World Player");
             int choice = SortClass.ValidateIntervalInput(1, 2, "Välj en siffra mellan 1-2");
@@ -55,11 +55,10 @@ namespace ExerciseProject
                         player.WhatPrize = Enum.WhatPrize.FifaWorldPlayer;
                         AddPlayerInput(player);
                         list.Add(player);
+                        break;
                     }
-                    break;
+                    
             }
-
-
         }
 
         public static void AddPlayerInput(IGBWinners player)
@@ -68,7 +67,7 @@ namespace ExerciseProject
             player.FirstName = Console.ReadLine();
             Console.WriteLine("Efternamn:");
             player.LastName = Console.ReadLine();
-            Console.WriteLine("Nationalitet");
+            Console.WriteLine("Nationalitet:");
             player.Nationality = Console.ReadLine();
             Console.WriteLine("Årtal:");
             player.WinningYear = SortClass.ValidateIntInput("Ange ett årtal, fyra siffror");

@@ -22,7 +22,7 @@ namespace ExerciseProject
                 else
                 {
                     Console.WriteLine("Listan är tom. Starta om? (Y)es/(N)o");
-                    Program.yes = Console.ReadLine();
+                    Program.PlayAgainUserInput = Console.ReadLine();
                 }
             }
             
@@ -77,7 +77,7 @@ namespace ExerciseProject
 
                         return listSortedByPrize;
                     }
-                case 4: Data.AddPlayer(list);
+                case 4: Data.AddPlayerToList(list);
                     return list;
                 case 5: Display.DisplayList(list);
                     return list;
